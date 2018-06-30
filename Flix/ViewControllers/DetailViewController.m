@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "TrailerViewController.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *MovieView;
@@ -37,6 +38,7 @@
     
     self.titleLabel.text = self.movies[@"title"];
     self.overViewLabel.text = self.movies[@"overview"];
+    [self.overViewLabel sizeToFit];
     
 }
 
@@ -45,14 +47,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    UITableViewCell *cell = sender;
+
+    TrailerViewController *trailerViewController = [segue destinationViewController];
+    trailerViewController.movies = self.movies;
 }
-*/
+
+- (IBAction)onTap:(id)sender {
+    [self performSegueWithIdentifier:@"trailerSegue" sender:sender];
+}
+
+   
+
 
 @end

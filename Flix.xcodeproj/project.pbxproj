@@ -22,6 +22,9 @@
 		CC7F2C2A20E55934006CDAAB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7F2C2920E55934006CDAAB /* DetailViewController.m */; };
 		CC7F2C2D20E566A5006CDAAB /* MovieGribViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7F2C2C20E566A5006CDAAB /* MovieGribViewController.m */; };
 		CC7F2C3420E57A42006CDAAB /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7F2C3320E57A42006CDAAB /* MovieCollectionViewCell.m */; };
+		CC7F2C3720E5D49F006CDAAB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7F2C3620E5D49F006CDAAB /* SearchViewController.m */; };
+		CC7F2C3D20E6E585006CDAAB /* TrailerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7F2C3C20E6E585006CDAAB /* TrailerViewController.m */; };
+		CC7F2C3F20E70716006CDAAB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7F2C3E20E70716006CDAAB /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,11 @@
 		CC7F2C2C20E566A5006CDAAB /* MovieGribViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieGribViewController.m; sourceTree = "<group>"; };
 		CC7F2C3220E57A42006CDAAB /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewCell.h; sourceTree = "<group>"; };
 		CC7F2C3320E57A42006CDAAB /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
+		CC7F2C3520E5D49F006CDAAB /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		CC7F2C3620E5D49F006CDAAB /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		CC7F2C3B20E6E585006CDAAB /* TrailerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrailerViewController.h; sourceTree = "<group>"; };
+		CC7F2C3C20E6E585006CDAAB /* TrailerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrailerViewController.m; sourceTree = "<group>"; };
+		CC7F2C3E20E70716006CDAAB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		F0F6036285DC51A82D4A6941 /* Pods-FlixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlixUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlixUITests/Pods-FlixUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC7F2C3F20E70716006CDAAB /* WebKit.framework in Frameworks */,
 				76A94992157B45DF40316316 /* libPods-Flix.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +117,7 @@
 		5E88DD48CE94A9E5CDD42ABE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC7F2C3E20E70716006CDAAB /* WebKit.framework */,
 				87CDB74D9F9392F65D71FF05 /* libPods-Flix.a */,
 				3711278FB880914C80F36707 /* libPods-FlixTests.a */,
 				33202FAEA33B31038AE3CF4B /* libPods-FlixUITests.a */,
@@ -193,6 +203,10 @@
 				CC7F2C2920E55934006CDAAB /* DetailViewController.m */,
 				CC7F2C2B20E566A5006CDAAB /* MovieGribViewController.h */,
 				CC7F2C2C20E566A5006CDAAB /* MovieGribViewController.m */,
+				CC7F2C3520E5D49F006CDAAB /* SearchViewController.h */,
+				CC7F2C3620E5D49F006CDAAB /* SearchViewController.m */,
+				CC7F2C3B20E6E585006CDAAB /* TrailerViewController.h */,
+				CC7F2C3C20E6E585006CDAAB /* TrailerViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -404,6 +418,8 @@
 				CC7F2C2D20E566A5006CDAAB /* MovieGribViewController.m in Sources */,
 				CC7F2C2720E4672F006CDAAB /* MovieCell.m in Sources */,
 				CC7F2C2220E4138C006CDAAB /* MoviesViewController.m in Sources */,
+				CC7F2C3720E5D49F006CDAAB /* SearchViewController.m in Sources */,
+				CC7F2C3D20E6E585006CDAAB /* TrailerViewController.m in Sources */,
 				CC7F2C3420E57A42006CDAAB /* MovieCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

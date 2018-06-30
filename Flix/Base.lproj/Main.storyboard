@@ -62,29 +62,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="Zrw-Lm-udf">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="QPJ-Ba-8xB">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" red="0.96620899438858032" green="0.27861601536914754" blue="0.91460749568398791" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="color" red="0.96544437319999998" green="0.65431967540000002" blue="0.96620899439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="b4N-Rt-gV9"/>
                     <connections>
-                        <outlet property="Activity" destination="Zrw-Lm-udf" id="iDn-a6-4Th"/>
+                        <outlet property="Activity" destination="QPJ-Ba-8xB" id="ZxO-a6-y1I"/>
                         <outlet property="TableView" destination="Exz-z0-Njz" id="JJn-EC-LzL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="616.25" y="35.573333333333331"/>
+            <point key="canvasLocation" x="1202.5" y="35.5"/>
         </scene>
-        <!--Item-->
+        <!--Top Rated-->
         <scene sceneID="LNo-dZ-x1S">
             <objects>
                 <navigationController id="Dqb-jc-TuN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="ticket_tabbar_icon" id="swz-OQ-Z4e"/>
+                    <tabBarItem key="tabBarItem" title="Top Rated" image="projector_tabbar_item" id="swz-OQ-Z4e"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q6K-Es-DW5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -95,7 +96,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uv8-fy-bgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147.5" y="1008.2816666666666"/>
+            <point key="canvasLocation" x="734.5" y="1007.5"/>
         </scene>
         <!--Movie Grib View Controller-->
         <scene sceneID="4tk-7R-H45">
@@ -132,6 +133,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="MovieView" destination="fgf-bz-rS1" id="aQS-ms-GBv"/>
+                                            <segue destination="MKl-CN-4aK" kind="push" id="qje-jP-xAg"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -146,12 +148,212 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvb-kt-Icr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="615.5" y="1006.5"/>
+            <point key="canvasLocation" x="1202.5" y="1006.5"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="i0z-bC-c9Y">
+            <objects>
+                <viewController id="MKl-CN-4aK" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8mG-7S-DDB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" id="HCh-0k-wOo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="ToM-rD-kt7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="ayW-AD-idv">
+                                        <rect key="frame" x="8" y="124" width="120" height="176"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="John Wick" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OIg-Tr-qFR">
+                                        <rect key="frame" x="136" y="211" width="231" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MHg-9a-1YX">
+                                        <rect key="frame" x="8" y="308" width="359" height="238"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">A volcanic eruption threatens the remaining dinosaurs on the island of Isla Nublar, where the creatures have freely roamed for several years after the demise of an animal theme park known as Jurassic World. Claire Dearing, the former park manager, has now founded the Dinosaur Protection Group, an organization dedicated to protecting the dinosaurs. To help with her cause, Claire has recruited Owen Grady, a former dinosaur trainer who worked at the park, to prevent the extinction of the dinosaurs once again</string>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LsV-Sq-M38"/>
+                    <connections>
+                        <outlet property="MovieView" destination="ayW-AD-idv" id="xNC-qi-2IT"/>
+                        <outlet property="backDropView" destination="ToM-rD-kt7" id="efx-ni-15j"/>
+                        <outlet property="overViewLabel" destination="MHg-9a-1YX" id="58O-EU-hyB"/>
+                        <outlet property="titleLabel" destination="OIg-Tr-qFR" id="aoK-RW-gYo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFu-SX-BEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697.5" y="1006.5"/>
+        </scene>
+        <!--Trailer View Controller-->
+        <scene sceneID="u40-7a-o3m">
+            <objects>
+                <viewController id="khx-r5-wj8" customClass="TrailerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b2E-oE-09P">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" misplaced="YES" id="tyl-xF-fvi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="trailerWV" destination="tyl-xF-fvi" id="Q8d-Cf-J0C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DmD-ko-GSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2263" y="36"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="kpR-bs-jsB">
+            <objects>
+                <viewController id="KSy-E4-yZJ" customClass="SearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mc8-pv-7Wl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" misplaced="YES" id="9Da-hx-qA1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7ey-Mg-qjM">
+                                <rect key="frame" x="0.0" y="120" width="375" height="527"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="86" id="YGB-oc-gN2" customClass="MovieCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YGB-oc-gN2" id="zlG-np-9ln">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="85.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="5Pq-fW-Vce">
+                                                    <rect key="frame" x="15" y="11" width="71" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Black Panther" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uQd-BR-70X">
+                                                    <rect key="frame" x="94" y="23" width="224" height="41"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="MovieView" destination="5Pq-fW-Vce" id="d3J-Wg-91e"/>
+                                            <outlet property="TitleLabel" destination="uQd-BR-70X" id="94p-7V-xBv"/>
+                                            <segue destination="fvV-k4-pYE" kind="push" id="D8p-97-eSk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sEv-bo-vwJ">
+                                <rect key="frame" x="321" y="77" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="CancelButton:" destination="KSy-E4-yZJ" eventType="touchUpInside" id="375-mF-MIJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="29v-DQ-1sA"/>
+                    <connections>
+                        <outlet property="SearchBar" destination="9Da-hx-qA1" id="I1s-sL-Pjo"/>
+                        <outlet property="tableView" destination="7ey-Mg-qjM" id="MES-zA-f9h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hV0-mz-pUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="177.5" y="2205.5"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="TVX-IF-vnZ">
+            <objects>
+                <viewController id="fvV-k4-pYE" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rVK-Vu-htt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" id="fmQ-ge-Wdh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="v8J-gq-Vs0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="9mh-Lb-eV8">
+                                        <rect key="frame" x="8" y="146" width="120" height="176"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="John Wick" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qRQ-UK-Zy4">
+                                        <rect key="frame" x="136" y="211" width="231" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iXr-u9-3Yx">
+                                        <rect key="frame" x="0.0" y="324" width="375" height="228"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">A volcanic eruption threatens the remaining dinosaurs on the island of Isla Nublar, where the creatures have freely roamed for several years after the demise of an animal theme park known as Jurassic World. Claire Dearing, the former park manager, has now founded the Dinosaur Protection Group, an organization dedicated to protecting the dinosaurs. To help with her cause, Claire has recruited Owen Grady, a former dinosaur trainer who worked at the park, to prevent the extinction of the dinosaurs once again</string>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iRi-p8-iMT"/>
+                    <connections>
+                        <outlet property="MovieView" destination="9mh-Lb-eV8" id="RL3-ix-FvV"/>
+                        <outlet property="backDropView" destination="v8J-gq-Vs0" id="kQh-Hf-74k"/>
+                        <outlet property="overViewLabel" destination="iXr-u9-3Yx" id="YAD-0b-F0T"/>
+                        <outlet property="titleLabel" destination="qRQ-UK-Zy4" id="h3E-bq-T6c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c43-Z4-3ng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="734.5" y="2205.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ock-DX-KPN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b8g-Fn-Lon" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController id="2gY-qI-pQ3" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O0P-LP-PQa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -161,10 +363,12 @@
                     <connections>
                         <segue destination="58b-4a-noK" kind="relationship" relationship="viewControllers" id="6sM-Lo-bhP"/>
                         <segue destination="Dqb-jc-TuN" kind="relationship" relationship="viewControllers" id="na8-TW-F0Y"/>
+                        <segue destination="oYj-hJ-3d2" kind="relationship" relationship="viewControllers" id="TD1-sH-Kyc"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8g-Fn-Lon" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-408.75" y="422.43333333333328"/>
+            <point key="canvasLocation" x="177.5" y="421.5"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="XmR-0B-Ju5">
@@ -182,9 +386,13 @@
                                         <rect key="frame" x="0.0" y="-4" width="375" height="203"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="g9x-ZI-Z20">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="g9x-ZI-Z20">
                                         <rect key="frame" x="8" y="124" width="120" height="176"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="tyy-2Q-vCK" appends="YES" id="LPl-Mo-iOR"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y69-FC-dEE">
                                         <rect key="frame" x="8" y="308" width="359" height="238"/>
@@ -194,7 +402,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Wick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W1R-Qg-SsM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Wick" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W1R-Qg-SsM">
                                         <rect key="frame" x="136" y="207" width="231" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="italicSystem" pointSize="28"/>
@@ -215,8 +423,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHK-uh-qkx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tyy-2Q-vCK">
+                    <connections>
+                        <action selector="onTap:" destination="Wha-p8-LXT" id="MLR-2W-NoP"/>
+                        <segue destination="khx-r5-wj8" kind="modal" identifier="trailerSegue" id="OOV-8O-AZE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1110.5" y="35.5"/>
+            <point key="canvasLocation" x="1697.5" y="35.5"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="yja-P9-34n">
@@ -235,11 +449,31 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j01-C0-68b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="147.5" y="35.573333333333331"/>
+            <point key="canvasLocation" x="734.5" y="35.5"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="hV6-yI-VdM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oYj-hJ-3d2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="reel_tabbar_icon" id="VjS-mb-pdS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hgt-0a-WLg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KSy-E4-yZJ" kind="relationship" relationship="rootViewController" id="7ra-xi-1ra"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qvk-zq-pPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="178" y="1310"/>
         </scene>
     </scenes>
     <resources>
         <image name="now_playing_tabbar_item" width="21" height="21"/>
-        <image name="ticket_tabbar_icon" width="25" height="25"/>
+        <image name="projector_tabbar_item" width="21" height="25"/>
+        <image name="reel_tabbar_icon" width="25" height="25"/>
     </resources>
 </document>
