@@ -251,9 +251,9 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sEv-bo-vwJ">
-                                <rect key="frame" x="321" y="77" width="30" height="30"/>
+                                <rect key="frame" x="257" y="77" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="X"/>
+                                <state key="normal" title="hide keyword"/>
                                 <connections>
                                     <action selector="CancelButton:" destination="KSy-E4-yZJ" eventType="touchUpInside" id="375-mF-MIJ"/>
                                 </connections>
