@@ -11,4 +11,5 @@
 @interface DetailViewController : UIViewController
 @property (nonatomic, strong) NSDictionary *movies;
 
+
 @end
