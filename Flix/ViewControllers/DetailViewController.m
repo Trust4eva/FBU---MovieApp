@@ -80,9 +80,6 @@
     UITableViewCell *cell = sender;
 }
 
-- (IBAction)onTap:(id)sender {
-    [self performSegueWithIdentifier:@"trailerSegue" sender:sender];
-}
 
 - (IBAction)PlayTralierButton:(id)sender {
     if (self.pressed == 0) {
